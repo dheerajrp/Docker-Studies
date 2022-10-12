@@ -14,11 +14,15 @@ Returns the list of available images in the local.
 ###### Alternate command:  docker container ls
 Returns the list of containers.
 
+![assignment_one/docker ps.PNG](https://github.com/dheerajrp/Docker-Studies/blob/master/assignment_one/docker%20container%20ls.PNG)
+
 
 #### 4. docker pull _image_
 Pulls the docker image from the docker hub _image_.
+
 ![assignment_one/docker pull.PNG](https://github.com/dheerajrp/Docker-Studies/blob/master/assignment_one/docker%20pull.PNG)
 
 #### 5. docker rmi _image_
 Removes one or more images.
+
 ![assignment_one/docker rmi.PNG](https://github.com/dheerajrp/Docker-Studies/blob/master/assignment_one/docker%20rmi.PNG)
