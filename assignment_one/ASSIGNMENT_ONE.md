@@ -3,7 +3,7 @@
 #### 1. docker login
 Logs in to the docker registry.
 
-![assignment_one/docker login.PNG](https://github.com/dheerajrp/Docker-Studies/blob/master/assignment_one/docker%20images.PNG)
+![assignment_one/docker login.PNG](https://github.com/dheerajrp/Docker-Studies/blob/master/assignment_one/docker%20login.PNG)
 
 #### 2. docker images
 Returns the list of available images in the local.
