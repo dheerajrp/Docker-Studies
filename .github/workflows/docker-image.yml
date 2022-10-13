@@ -1,28 +1,49 @@
 name: Docker Image CI
 
+#on:
+#  push:
+#    branches: [ "master" ]
+#  pull_request:
+#    branches: [ "master" ]
+#
+#jobs:
+#
+#  build:
+#
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#    - uses: actions/checkout@v3
+#    - name: Build the Docker image
+#      run: docker build . --file Dockerfile
+#
+#    - name: Publish to docker hub
+#      uses: docker/build-push-action@v3
+#      with:
+#        username: ${{ secrets.DOCKER_HUB_USERNAME }}
+#        password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+#        dockerfile: Dockerfile
+#        repository: dhee1006/hi-world
+#        tags: latest, ${{ github.run_number }}
+
 on:
   push:
-    branches: [ "master" ]
+   branches: [ master ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ master ]
 
 jobs:
-
   build:
 
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile
-
-    - name: Publish to docker hub
-      uses: docker/build-push-action@v3
+    - uses: actions/checkout@v1
       with:
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_PASSWORD }}
-        dockerfile: Dockerfile
-        repository: dhee1006/hi-world
-        tags: latest, ${{ github.run_number }}
+    - name: Build & Push Image
+      run: |
+        docker image build -t dhee1006/hi-world:latest .
+        docker push dhee1006/hi-world:latest
     
