@@ -16,4 +16,8 @@ http://127.0.0.1:5000/numpy  - prints numpy version
 
 http://127.0.0.1:5000/pandas - prints pandas version
 
+http://127.0.0.1:5000/name - prints the name and the course
+
+
+
 Docker image in docker hub: https://hub.docker.com/repository/docker/dhee1006/hi-world
