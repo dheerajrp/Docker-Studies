@@ -1,6 +1,8 @@
 """
 Flask app for hello world!!
 """
+import datetime
+
 import numpy as np
 import pandas as pd
 from fastapi import FastAPI
@@ -39,3 +41,17 @@ def pandas_version():
         pandas version string
     """
     return f"pandas version is {pd.__version__}"
+
+
+@app.get("/name")
+def get_my_name():
+    """
+    Gets some random value. This is used for checking the docker
+    build in the GitHub Actions
+
+    Returns:
+         dict:
+            my name
+    """
+    return dict(name="Dheeraj",
+                topic="Industry ready projects")

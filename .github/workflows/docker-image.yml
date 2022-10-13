@@ -2,17 +2,20 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ master ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ master ]
 
 jobs:
-
   build:
 
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file assignment_three/hello_world/Dockerfile --tag ${{ secrets.image_name }}:$(date +%s)
+      - uses: actions/checkout@v1
+      - name: Build & Push Image
+        run: |
+          echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
+          docker image build -t dhee1006/hi-world:latest .
+          docker push dhee1006/hi-world:latest
+    
