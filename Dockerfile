@@ -2,7 +2,8 @@
 FROM python:3.10.0
 
 # folder in the container
-COPY assignment_three/hello_world /app
+COPY main.py /app
+COPY Dockerfile /app
 
 # setting working directory
 WORKDIR /app
