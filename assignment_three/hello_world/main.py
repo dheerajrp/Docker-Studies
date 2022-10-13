@@ -53,4 +53,5 @@ def get_current_time():
          dict:
             timestamp
     """
-    return dict(time=datetime.datetime.now())
+    current_time = datetime.datetime.now()
+    return dict(time=current_time)
