@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: Building docker image
+    - uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build . --file assignment_three/hello_world/Dockerfile --tag ${{ secrets.image_name }}:$(date +%s)
 
-    - uses: Pushing the docker image
+    - uses: actions/checkout@v3
     - name: Push the docker image
       run: docker push dhee1006/hi-world:v1.0.0
