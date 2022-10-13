@@ -43,15 +43,15 @@ def pandas_version():
     return f"pandas version is {pd.__version__}"
 
 
-@app.get("/time")
-def get_current_time():
+@app.get("/name")
+def get_my_name():
     """
-    Gets the current timestamp. This is used for checking the docker
+    Gets some random value. This is used for checking the docker
     build in the GitHub Actions
 
     Returns:
          dict:
-            timestamp
+            my name
     """
-    current_time = datetime.datetime.now()
-    return dict(time=current_time)
+    return dict(name="Dheeraj",
+                topic="Industry ready projects")
