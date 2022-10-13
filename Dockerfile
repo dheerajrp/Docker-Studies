@@ -3,7 +3,6 @@ FROM python:3.10.0
 
 # folder in the container
 COPY main.py /app
-COPY Dockerfile /app
 
 # setting working directory
 WORKDIR /app
