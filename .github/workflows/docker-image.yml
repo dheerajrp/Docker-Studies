@@ -18,7 +18,7 @@ jobs:
       run: docker build . --file assignment_three/hello_world/Dockerfile --tag ${{ secrets.image_name }}:$(date +%s)
 
     - name: Publish to docker hub
-      uses: docker/build-push-action@v1
+      uses: docker/build-push-action@v3
       with:
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_PASSWORD }}
