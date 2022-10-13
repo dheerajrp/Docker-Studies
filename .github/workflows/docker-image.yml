@@ -15,13 +15,13 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file assignment_three/hello_world/Dockerfile --tag ${{ secrets.image_name }}:$(date +%s)
+      run: docker build . --file Dockerfile
 
     - name: Publish to docker hub
       uses: docker/build-push-action@v3
       with:
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_PASSWORD }}
-        dockerfile: assignment_three/hello_world/Dockerfile
+        dockerfile: Dockerfile
         repository: dhee1006/hi-world
         tags: latest, ${{ github.run_number }}

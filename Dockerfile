@@ -2,7 +2,7 @@
 FROM python:3.10.0
 
 # folder in the container
-COPY . /app
+COPY assignment_three/hello_world /app
 
 # setting working directory
 WORKDIR /app
