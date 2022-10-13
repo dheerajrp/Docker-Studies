@@ -25,3 +25,4 @@ jobs:
         dockerfile: Dockerfile
         repository: dhee1006/hi-world
         tags: latest, ${{ github.run_number }}
+      run: docker push dhee1006/hi-world
