@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ${{ secrets.image_name }}:$(date +%s)
+      run: docker build . --file assignment_three/hello_world/Dockerfile --tag ${{ secrets.image_name }}:$(date +%s)
