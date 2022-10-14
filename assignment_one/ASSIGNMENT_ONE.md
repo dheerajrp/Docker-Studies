@@ -50,4 +50,4 @@ Fetch the logs of the container.
 #### 10. docker _container_ build 
 Build an image from a Dockerfile
 
-![assignment_one/docker build.PNG](https://github.com/dheerajrp/Docker-Studies/blob/master/assignment_one/docker%build.PNG)
+![assignment_one/docker build.PNG](https://github.com/dheerajrp/Docker-Studies/blob/master/assignment_one/docker%20build.PNG)
