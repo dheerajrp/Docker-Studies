@@ -1,10 +1,17 @@
 ### Create a hello world fastapi application. Create a Dockerfile for your fastapi hello world application. Build Docker image using Docker file. Run docker image build in previous step. Push your Docker image to Docker Hub.
 
+[See application](https://github.com/dheerajrp/Docker-Studies/blob/master/main.py)
+
+[See Dockerfile](https://github.com/dheerajrp/Docker-Studies/blob/master/Dockerfile)
+
 #### Docker pull command
     docker pull dhee1006/hi-world
 
 #### Docker run command
     docker run -d -p 5000:8000 dhee1006/hi-world
+
+#### Docker push command
+    docker push dhee1006/hi-world
 
 #### Endpoints
 

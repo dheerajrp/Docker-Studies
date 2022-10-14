@@ -1,8 +1,6 @@
 """
 Flask app for hello world!!
 """
-import datetime
-
 import numpy as np
 import pandas as pd
 from fastapi import FastAPI
